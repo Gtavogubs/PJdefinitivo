@@ -1,5 +1,6 @@
 @media screen and (max-width: 640px) {
     body {
+        min-height: 100vh;
         background-image: url(wppmediaquery.png);
         background-size: cover;
         background-attachment: fixed;
@@ -9,7 +10,27 @@
 
     }
 
+    footer {
+        color: white;
+        font-weight: bold;
+        width: 100%;
+        background: black;
+        text-align: center;
+        position: FIXED;
+        bottom: 0;
+        left: 0;
+        height: 80px;
+        transition: bottom 0.3s ease;
+        bottom: -60px;
+
+    }
+
+    footer:hover{
+        bottom: 0;
+    }
+
     main {
+        flex: 1;
         margin-top: 30px;
         display: flex;
         flex-direction: column;
@@ -19,17 +40,6 @@
         margin-left: 0;
     }
 
-    #as1 {
-        text-align: center;
-        font-family: 'Sitka subheading';
-        font-size: 60px;
-        text-align: center;
-        transition: all 0.3s ease;
-        text-shadow: 0 0 5px rgb(0, 0, 0);
-        margin-top: 10px;
-        margin-right: 50px;
-        
-    }
 
     #as2 {
         transition: all 0.3s ease;
@@ -78,6 +88,7 @@
         grid-template-rows: repeat(2, 0.5fr);
         padding-top: 36px;
     }
+
     hr {
         color: white;
         border: 2px 2px 2px 2px;
@@ -85,59 +96,6 @@
         grid-row: 1/3;
         align-self: center;
     }
-    .mn1 {
-        font-family: 'Times New Roman', Times, serif;
-        font-size: 35px;
-        grid-column: 2;
-        grid-row: 1;
-        text-shadow: 0 0 5px rgb(0, 0, 0);
-    }
-    .mn2 {
-        font-family: 'Times New Roman', Times, serif;
-        font-size: 25px;
-        grid-column: 2;
-        grid-row: 2;
-        margin: 1px;
-        text-shadow: 0 0 5px rgb(0, 0, 0);
 
-    }
-
-    .mn3 {
-        font-family: 'Times New Roman', Times, serif;
-        font-size: 25px;
-        grid-column: 3;
-        grid-row: 2;
-        margin: 1px;
-        text-shadow: 0 0 5px rgb(0, 0, 0);
-    }
-
-    .mn4 {
-        font-family: 'Times New Roman', Times, serif;
-        font-size: 25px;
-        grid-column: 4;
-        grid-row: 2;
-        margin: 1px;
-        text-shadow: 0 0 5px rgb(0, 0, 0);
-    }
-
-    .mn5 {
-        font-family: 'Times New Roman', Times, serif;
-        font-size: 25px;
-        grid-column: 5;
-        grid-row: 2;
-        margin: 1px;
-        text-shadow: 0 0 5px rgb(0, 0, 0);
-    }
-
-    .mn6 {
-        font-family: 'Times New Roman', Times, serif;
-        font-size: 25px;
-        grid-column: 6;
-        grid-row: 2;
-        margin: 1px;
-        text-shadow: 0 0 5px rgb(0, 0, 0);
-    }
-
-    
 
 }
