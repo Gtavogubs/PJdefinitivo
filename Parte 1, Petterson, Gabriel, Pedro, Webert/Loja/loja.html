@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Loja - Alpha Gym</title>
     <link rel="stylesheet" href="style2.css">
 </head>
+
 <body>
     <header>
         <nav class="navbar">
@@ -15,12 +17,25 @@
                 </div>
                 <ul class="nav-menu">
                     <li><a href="/Parte 1, Petterson, Gabriel, Pedro, Webert/Página Inicial/index.html">INÍCIO</a></li>
-                    <li><a href="/Parte 2, Gustavo J e Fagner/Treinos/PJintregador2.html" >TREINOS</a></li>
+                    <li><a href="/Parte 2, Gustavo J e Fagner/Treinos/PJintregador2.html">TREINOS</a></li>
                     <li><a href="/Parte 2, Gustavo J e Fagner/IMC/index.html">CALCULADORA (IMC)</a></li>
-                    <li><a href="/Parte 1, Petterson, Gabriel, Pedro, Webert/Loja/loja.html" class="active">LOJA</a></li>
+                    <li><a href="/Parte 1, Petterson, Gabriel, Pedro, Webert/Loja/loja.html" class="active">LOJA</a>
+                    </li>
                     <li><a href="/Parte 1, Petterson, Gabriel, Pedro, Webert/Premium/premium.html">ÁREA PREMIUM</a></li>
-                    <li><a href="/Parte 1, Petterson, Gabriel, Pedro, Webert/Nutricionista/nutricionista.html">NUTRICIONISTA</a></li>
+                    <li><a
+                            href="/Parte 1, Petterson, Gabriel, Pedro, Webert/Nutricionista/nutricionista.html">NUTRICIONISTA</a>
+                    </li>
                     <li><a href="/Parte 1, Petterson, Gabriel, Pedro, Webert/Sobre Nós/sobre.html">SOBRE</a></li>
+                   
+
+                    <div class="cart-icon" onclick="toggleCart()">
+                        🛒 <span id="cart-count">0</span>
+                    </div>
+
+                    <div class="login-nav">
+                        <a href="login.html" class="btn-login">LOGIN</a>
+                    </div>
+
                 </ul>
                 <img id="Montanha" src="motanha.png" alt="">
                 <div class="cart-icon" onclick="toggleCart()">
@@ -52,7 +67,8 @@
                         <div class="product-info">
                             <h3>Regata Masculina Alpha</h3>
                             <p class="product-price">R$ 89,90</p>
-                            <button class="btn btn-primary" onclick="addToCart('Regata Masculina Alpha', 89.90)">ADICIONAR AO CARRINHO</button>
+                            <button class="btn btn-primary"
+                                onclick="addToCart('Regata Masculina Alpha', 89.90)">ADICIONAR AO CARRINHO</button>
                         </div>
                     </div>
 
@@ -61,7 +77,8 @@
                         <div class="product-info">
                             <h3>Conjunto Fitness Feminino</h3>
                             <p class="product-price">R$ 149,90</p>
-                            <button class="btn btn-primary" onclick="addToCart('Conjunto Fitness Feminino', 149.90)">ADICIONAR AO CARRINHO</button>
+                            <button class="btn btn-primary"
+                                onclick="addToCart('Conjunto Fitness Feminino', 149.90)">ADICIONAR AO CARRINHO</button>
                         </div>
                     </div>
 
@@ -70,7 +87,8 @@
                         <div class="product-info">
                             <h3>Conjunto Masculino Premium</h3>
                             <p class="product-price">R$ 199,90</p>
-                            <button class="btn btn-primary" onclick="addToCart('Conjunto Masculino Premium', 199.90)">ADICIONAR AO CARRINHO</button>
+                            <button class="btn btn-primary"
+                                onclick="addToCart('Conjunto Masculino Premium', 199.90)">ADICIONAR AO CARRINHO</button>
                         </div>
                     </div>
 
@@ -80,7 +98,8 @@
                         <div class="product-info">
                             <h3>Shaker Alpha Pro</h3>
                             <p class="product-price">R$ 39,90</p>
-                            <button class="btn btn-primary" onclick="addToCart('Shaker Alpha Pro', 39.90)">ADICIONAR AO CARRINHO</button>
+                            <button class="btn btn-primary" onclick="addToCart('Shaker Alpha Pro', 39.90)">ADICIONAR AO
+                                CARRINHO</button>
                         </div>
                     </div>
 
@@ -89,7 +108,8 @@
                         <div class="product-info">
                             <h3>Coqueteleira Premium</h3>
                             <p class="product-price">R$ 49,90</p>
-                            <button class="btn btn-primary" onclick="addToCart('Coqueteleira Premium', 49.90)">ADICIONAR AO CARRINHO</button>
+                            <button class="btn btn-primary" onclick="addToCart('Coqueteleira Premium', 49.90)">ADICIONAR
+                                AO CARRINHO</button>
                         </div>
                     </div>
 
@@ -98,7 +118,8 @@
                         <div class="product-info">
                             <h3>Kit Suplementos Alpha</h3>
                             <p class="product-price">R$ 299,90</p>
-                            <button class="btn btn-primary" onclick="addToCart('Kit Suplementos Alpha', 299.90)">ADICIONAR AO CARRINHO</button>
+                            <button class="btn btn-primary"
+                                onclick="addToCart('Kit Suplementos Alpha', 299.90)">ADICIONAR AO CARRINHO</button>
                         </div>
                     </div>
 
@@ -108,7 +129,8 @@
                         <div class="product-info">
                             <h3>Kit Acessórios Fitness</h3>
                             <p class="product-price">R$ 129,90</p>
-                            <button class="btn btn-primary" onclick="addToCart('Kit Acessórios Fitness', 129.90)">ADICIONAR AO CARRINHO</button>
+                            <button class="btn btn-primary"
+                                onclick="addToCart('Kit Acessórios Fitness', 129.90)">ADICIONAR AO CARRINHO</button>
                         </div>
                     </div>
 
@@ -117,7 +139,8 @@
                         <div class="product-info">
                             <h3>Suporte para Equipamentos</h3>
                             <p class="product-price">R$ 189,90</p>
-                            <button class="btn btn-primary" onclick="addToCart('Suporte para Equipamentos', 189.90)">ADICIONAR AO CARRINHO</button>
+                            <button class="btn btn-primary"
+                                onclick="addToCart('Suporte para Equipamentos', 189.90)">ADICIONAR AO CARRINHO</button>
                         </div>
                     </div>
                 </div>
@@ -125,7 +148,7 @@
         </section>
     </main>
     <footer>
-        <h4>  Alpha Gym &COPY; 2025-2026</h4>
+        <h4> Alpha Gym &COPY; 2025-2026</h4>
     </footer>
     <!-- Carrinho lateral -->
     <div id="cart-sidebar" class="cart-sidebar">
@@ -153,13 +176,13 @@
 
         function addToCart(name, price) {
             const existingItem = cart.find(item => item.name === name);
-            
+
             if (existingItem) {
                 existingItem.quantity += 1;
             } else {
                 cart.push({ name, price, quantity: 1 });
             }
-            
+
             updateCartDisplay();
             showCartNotification();
         }
@@ -173,13 +196,13 @@
             const cartCount = document.getElementById('cart-count');
             const cartItems = document.getElementById('cart-items');
             const cartTotalElement = document.getElementById('cart-total');
-            
+
             const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
             cartCount.textContent = totalItems;
-            
+
             cartTotal = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
             cartTotalElement.textContent = cartTotal.toFixed(2).replace('.', ',');
-            
+
             if (cart.length === 0) {
                 cartItems.innerHTML = '<p class="empty-cart">Seu carrinho está vazio</p>';
             } else {
@@ -199,7 +222,7 @@
         function toggleCart() {
             const sidebar = document.getElementById('cart-sidebar');
             const overlay = document.getElementById('cart-overlay');
-            
+
             sidebar.classList.toggle('active');
             overlay.classList.toggle('active');
         }
@@ -207,10 +230,10 @@
         function filterProducts(category) {
             const products = document.querySelectorAll('.product-card');
             const buttons = document.querySelectorAll('.filter-btn');
-            
+
             buttons.forEach(btn => btn.classList.remove('active'));
             event.target.classList.add('active');
-            
+
             products.forEach(product => {
                 if (category === 'all' || product.dataset.category === category) {
                     product.style.display = 'block';
@@ -234,11 +257,11 @@
                 alert('Seu carrinho está vazio!');
                 return;
             }
-            
+
             // Redirecionar para página de checkout (será criada)
             window.location.href = 'checkout.html';
         }
     </script>
 </body>
-</html>
 
+</html>
