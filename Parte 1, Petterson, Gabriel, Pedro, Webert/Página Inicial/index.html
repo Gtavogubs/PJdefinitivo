@@ -29,28 +29,29 @@
                             href="/Parte 1, Petterson, Gabriel, Pedro, Webert/Nutricionista/nutricionista.html">NUTRICIONISTA</a>
                     </li>
                     <li><a href="/Parte 1, Petterson, Gabriel, Pedro, Webert/Sobre Nós/sobre.html">SOBRE</a></li>
-                    <li><a href="/Parte 1, Petterson, Gabriel, Pedro, Webert/login/index.html" class="btn-login">CADASTRO</a></li>
+                    <li><a href="/Parte 1, Petterson, Gabriel, Pedro, Webert/login/index.html"
+                            class="btn-login">CADASTRO</a></li>
                 </ul>
-                
+
                 <img id="Montanha" src="motanha.png" alt="">
 
                 <div class="container-login">
                     <a href="#" class="botao-login">Minha Conta</a>
                     <div class="aba-login">
-                        <form>
+                        <form onsubmit="fazerLogin(event)">
                             <p class="titulo-aba">Login</p>
-                            <input type="email" placeholder="E-mail">
-                            <input type="password" placeholder="Senha">
+                            <input type="email" id="loginEmail" placeholder="E-mail" required>
+                            <input type="password" id="loginSenha" placeholder="Senha" required>
                             <button type="submit" class="btn-principal">Entrar</button>
                         </form>
 
                         <hr class="divisor">
 
-                        <form>
+                        <form onsubmit="criarConta(event)">
                             <p class="titulo-aba">Criar Conta</p>
-                            <input type="text" placeholder="Nome Completo">
-                            <input type="email" placeholder="E-mail">
-                            <input type="password" placeholder="Crie uma Senha">
+                            <input type="text" id="regNome" placeholder="Nome Completo" required>
+                            <input type="email" id="regEmail" placeholder="E-mail" required>
+                            <input type="password" id="regSenha" placeholder="Crie uma Senha" required>
                             <button type="submit" class="btn-secundario">Cadastrar-se</button>
                         </form>
                     </div>
@@ -72,6 +73,47 @@
     <footer>
         <h4> Alpha Gym &COPY; 2025-2026</h4>
     </footer>
+
+    <script>
+        const API = "http://localhost:3001";
+
+        
+        async function criarConta(event) {
+            event.preventDefault(); 
+            const inputs = document.querySelectorAll('.aba-login form:last-of-type input');
+            const nome = inputs[0].value;
+            const email = inputs[1].value;
+            const senha = inputs[2].value;
+
+            const response = await fetch(`${API}/usuarios`, {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ nome, email, senha })
+            });
+            const data = await response.json();
+            alert(data.message);
+        }
+
+       
+        async function fazerLogin(event) {
+            event.preventDefault();
+            const inputs = document.querySelectorAll('.aba-login form:first-of-type input');
+            const email = inputs[0].value;
+            const senha = inputs[1].value;
+
+            const response = await fetch(`${API}/login`, {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ email, senha })
+            });
+            const data = await response.json();
+            alert(data.message);
+        }
+
+        
+        document.querySelector(".btn-secundario").onclick = criarConta;
+        document.querySelector(".btn-principal").onclick = fazerLogin;
+    </script>
 </body>
 
 </html>
