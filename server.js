@@ -5,16 +5,16 @@ const app = express();
 
 app.use(cors());
 app.use(express.json());
-app.use(express.static('Página Inicial')); // Serve seu index.html e CSS [cite: 532]
+app.use(express.static('Página Inicial')); 
 
 const db = mysql.createConnection({
     host: "localhost",
     user: "root",
-    password: "", // Sua senha do MySQL aqui [cite: 644]
+    password: "",
     database: "alpha_gym"
 });
 
-// CREATE: Registro de novo usuário
+
 app.post("/usuarios", (req, res) => {
     const { nome, email, senha } = req.body;
     const sql = "INSERT INTO usuarios (nome, email, senha) VALUES (?, ?, ?)";
@@ -24,7 +24,7 @@ app.post("/usuarios", (req, res) => {
     });
 });
 
-// READ: Verificação de Login
+
 app.post("/login", (req, res) => {
     const { email, senha } = req.body;
     const sql = "SELECT * FROM usuarios WHERE email = ? AND senha = ?";
